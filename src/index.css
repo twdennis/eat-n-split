@@ -5,6 +5,16 @@
   --color-dark: #ff922b;
 }
 
+.title {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+  font-size: x-large;
+  font-style: italic;
+  color: rgba(10, 113, 70, 0.58);
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +33,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgb(251, 248, 248);
+
 }
 
 .app {
@@ -31,6 +43,8 @@ body {
   grid-template-columns: 34rem 44rem;
   column-gap: 4rem;
   align-items: start;
+  padding: 25px;
+  background-color: rgb(251, 248, 248);
 }
 
 .button {
