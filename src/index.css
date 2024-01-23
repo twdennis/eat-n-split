@@ -65,7 +65,7 @@ body {
 
   padding: 1.2rem;
   border-radius: 7px;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 .selected,
@@ -74,7 +74,7 @@ body {
 }
 
 .sidebar li img {
-  border-radius: 50%;
+  border-radius: 15%;
   width: 100%;
   grid-row: span 2;
 }
