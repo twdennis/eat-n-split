@@ -56,28 +56,42 @@ export default function App() {
   }
 
   return (
-    <div className="app">
-      <div className="sidebar">
-        <FriendsList
-          friends={friends}
-          onSelectFriend={handleSelectFriend}
-          selectedFriend={selectedFriend}
-        />
-        {showAddFriend && <FormAddFriend onAddFriend={handleAddFriend} />}
-        <Button onClick={handleShowAddFriend}>
-          {showAddFriend ? "Close" : "Add Friend"}
-        </Button>
+    <>
+      <Title />
+      <div className="app">
+        <div className="sidebar">
+          <FriendsList
+            friends={friends}
+            onSelectFriend={handleSelectFriend}
+            selectedFriend={selectedFriend}
+          />
+          {showAddFriend && <FormAddFriend onAddFriend={handleAddFriend} />}
+          <Button onClick={handleShowAddFriend}>
+            {showAddFriend ? "Close" : "Add Friend"}
+          </Button>
+        </div>
+        {selectedFriend && (
+          <FormSplitBill
+            friend={selectedFriend}
+            onSplitBill={handleSplitBill}
+            bill={bill}
+            setBill={setBill}
+            userExpense={userExpense}
+            setUserExpense={setUserExpense}
+          />
+        )}
       </div>
-      {selectedFriend && (
-        <FormSplitBill
-          friend={selectedFriend}
-          onSplitBill={handleSplitBill}
-          bill={bill}
-          setBill={setBill}
-          userExpense={userExpense}
-          setUserExpense={setUserExpense}
-        />
-      )}
+    </>
+  );
+}
+
+function Title() {
+  const underline = { textDecoration: "underline" };
+  return (
+    <div className="title">
+      <h1>
+        <span style={underline}>EAT 'N SPLIT</span>💨
+      </h1>
     </div>
   );
 }
