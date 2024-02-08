@@ -22,6 +22,7 @@ export function FormAddFriend({ onAddFriend }) {
     setImage("https://i.pravatar.cc/48");
   }
   return (
+    
     <form className="form-add-friend" onSubmit={handleSubmit}>
       <label>✒️ Friend name</label>
       <input

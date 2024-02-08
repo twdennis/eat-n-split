@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import { initialFriends } from "./initialFriends";
 import { Title } from "./Title";
 import { FriendsList } from "./FriendsList";
@@ -57,6 +58,7 @@ export default function App() {
         </div>
         {selectedFriend && (
           <FormSplitBill
+            key={selectedFriend.id}
             friend={selectedFriend}
             onSplitBill={handleSplitBill}
             bill={bill}
